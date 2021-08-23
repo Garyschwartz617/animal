@@ -7,6 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h1> Home page Hello {{user.email}}</h1>
+    <h4>Signup Here!</h4>
+<form method='post'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    {{ profile_form.as_p }}
+<button class='btn btn-success' type="submit">Save</button>
+</form>
 </body>
 </html>
